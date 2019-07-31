@@ -1,0 +1,10 @@
+package by.krokam.biarescie.navigation
+
+object Screens {
+    val SECTION_LIST_SCREEN = "SECTION_LIST_SCREEN"
+    val EXHIBIT_LIST_SCREEN = "EXHIBIT_LIST_SCREEN"
+    val EXHIBIT_SCREEN = "EXHIBIT_SCREEN"
+    val ABOUT_US_SCREEN = "ABOUT_US_SCREEN"
+    val PREVIEW_SCREEN = "PREVIEW_SCREEN"
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Бярэсце</string>
+    <string name="section">"Зала № %1$s"</string>
+    <string name="sections">Часткi</string>
+    <string name="exhibit">""</string>
+    <string name="choose_lang">"Абярыце мову"</string>
+    <string name="nav_lang">"Мова"</string>
+    <string name="nav_exit">"Выхад"</string>
+    <string name="about_us">"Пра нас"</string>
+    <string name="about_us_text"><![CDATA[
+<b>Распрацоўшчык:</b> Лабараторыя распазнавання і сінтэзу маўлення
+Аб&apos;яднаны Інстытут праблем Інфарматыкі НАН Беларусі (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>
+<b>Аўдыягід ў Інтэрнэце:</b> <br/>
+http://krokam.by/biarescie <br/>
+Кантакт для <b>прапаноў, каментарыяў, пажаданняў:</b><br/>
+ssrlab221@gmail.com]]> </string>
+
+    <string name="long_desc">Каротка</string>
+    <string name="short_desc">Цалкам</string>
+
+</resources>

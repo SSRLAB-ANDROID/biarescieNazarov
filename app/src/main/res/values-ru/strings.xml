@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Берестье</string>
+    <string name="section">"Зал № %1$s"</string>
+    <string name="sections">"Секции"</string>
+    <string name="exhibit">""</string>
+    <string name="choose_lang">"Выберите язык"</string>
+    <string name="nav_lang">"Язык"</string>
+    <string name="nav_exit">"Выход"</string>
+    <string name="about_us">"О нас"</string>
+    <string name="about_us_text"><![CDATA[
+<b>Разработчик: </b> Лаборатория распознавания и синтеза речи
+Объединенный институт проблем информатики НАН Беларуси (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>
+<b>Аудиогид в Интернете:</b> <br/>
+http://krokam.by/biarescie <br/>
+Контакт для <b>предложений, комментариев, пожеланий:</b><br/>
+ssrlab221@gmail.com]]> </string>
+
+    <string name="long_desc">Краткое описание</string>
+    <string name="short_desc">Полное описание</string>
+
+</resources>
