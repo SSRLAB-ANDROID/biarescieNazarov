@@ -9,8 +9,8 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.nevermore.sashoolya.holybible"
-        minSdkVersion 15
+        applicationId "by.sslab.biaresce"
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"

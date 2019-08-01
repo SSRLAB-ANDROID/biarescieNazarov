@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import by.krokam.biarescie.R
+import by.krokam.biarescie.util.onParamMeasured
 import kotlinx.android.synthetic.main.fragment_text.view.*
 
 class TextFragment : Fragment() {
@@ -15,6 +16,8 @@ class TextFragment : Fragment() {
             view?.tvText?.text = value
         }
 
+    var onHeigtChanged: ((Int) -> Unit)? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_text, container, false)
     }
@@ -22,5 +25,8 @@ class TextFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.tvText.text = text
+        view.onParamMeasured({ view.measuredHeight }) {
+            onHeigtChanged?.invoke(it)
+        }
     }
 }

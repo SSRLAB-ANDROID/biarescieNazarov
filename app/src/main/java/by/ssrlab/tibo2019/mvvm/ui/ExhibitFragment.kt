@@ -11,7 +11,7 @@ import by.krokam.biarescie.ui.viewpager.TextFragment
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_exhibit.*
 
-class ExhibitFragment : BaseFragment<ExhibitVM>(){
+class ExhibitFragment : BaseFragment<ExhibitVM>() {
     override val contentLayoutID = R.layout.fragment_exhibit
 
     override fun initVM() {
@@ -25,7 +25,7 @@ class ExhibitFragment : BaseFragment<ExhibitVM>(){
     }
 
 
-    private fun setupExhibitObserver(){
+    private fun setupExhibitObserver() {
         vm.selectedExhibit.observe(this, Observer {
             Glide.with(context!!).load(it!!.photo).into(ivPhoto)
             vm.toolbarTitle.value = getString(R.string.exhibit, it.idPoint.toString())
@@ -35,12 +35,34 @@ class ExhibitFragment : BaseFragment<ExhibitVM>(){
             pager.adapter = null
 
             pager.adapter = CustomPagerAdapter(childFragmentManager).apply {
-                if(it.text.isNotBlank())
-                addFragment(TextFragment().apply { text = it.text}, "")
-else
-                if(it.textLong.isNotBlank() && it.textLong != it.text){
-                    addFragment(TextFragment().apply { text = it.textLong}, "")
-                }
+                if (it.text.isNotBlank())
+                    addFragment(
+                            TextFragment().apply {
+                                text = it.text
+                                onHeigtChanged = {
+                                    this@ExhibitFragment.pager?.apply {
+                                        layoutParams.height = it
+                                        requestLayout()
+                                    }
+                                }
+                            },
+                            ""
+                    )
+                else
+                    if (it.textLong.isNotBlank() && it.textLong != it.text) {
+                        addFragment(
+                                TextFragment().apply {
+                                    text = it.textLong
+                                    onHeigtChanged = {
+                                        this@ExhibitFragment.pager?.apply {
+                                            layoutParams.height = it
+                                            requestLayout()
+                                        }
+                                    }
+                                },
+                                ""
+                        )
+                    }
             }
             tabs.setupWithViewPager(pager)
         })
