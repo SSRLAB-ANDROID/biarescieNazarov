@@ -25,7 +25,7 @@ interface AppDao {
     @Query("SELECT * FROM exhibit")
     fun getExpositions() : LiveData<List<Exhibit>>
 
-    @Query("SELECT * FROM section")
+    @Query("SELECT * FROM section ")
     fun getSectonsRx() : Flowable<List<Section>>
 
     @Query("SELECT * FROM exhibit ")

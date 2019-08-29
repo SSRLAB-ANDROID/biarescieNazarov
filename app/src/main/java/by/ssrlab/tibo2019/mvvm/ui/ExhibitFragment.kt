@@ -28,7 +28,7 @@ class ExhibitFragment : BaseFragment<ExhibitVM>() {
     private fun setupExhibitObserver() {
         vm.selectedExhibit.observe(this, Observer {
             Glide.with(context!!).load(it!!.photo).into(ivPhoto)
-            vm.toolbarTitle.value = getString(R.string.exhibit, it.idPoint.toString())
+            ///vm.toolbarTitle.value =it.name //getString(R.string.exhibit, it.idPoint.toString())
             tvName.text = it.name
             tvPlace.text = it.pointMuseum
 

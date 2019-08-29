@@ -30,5 +30,9 @@ class ChooseLanguageDialog : AppCompatDialogFragment(){
             (activity!! as MainActivity).setLanguage(Language.RUS)
             dismiss()
         }
+        btnPl.setOnClickListener {
+            (activity!! as MainActivity).setLanguage(Language.PL)
+            dismiss()
+        }
     }
 }

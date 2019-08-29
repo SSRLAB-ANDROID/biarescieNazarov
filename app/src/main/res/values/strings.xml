@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Biarescie</string>
     <string name="section">"Section %1$s"</string>
     <string name="sections">"Sections"</string>
     <string name="exhibit">" Organization %1$s"</string>

@@ -39,11 +39,11 @@ class Repository2(app: Application, private var lang: Language) {
     }
 
     private fun refreshData() {
-        sections.onNext(allSections.filter { it.lang == lang.value })
+        sections.onNext(allSections.filter { it.lang == lang.value && it.visible=="true" })
         allExhibits.find { it.idPoint.toString() == selectedExhibitID && it.lang == lang.value && it.name.length!=0 }?.let {
             selectedExhibit.onNext(it)
         }
-        allSections.find { it.lang == lang.value && it.id == selectedSectionID }?.let {sec ->
+        allSections.find { it.lang == lang.value && it.id == selectedSectionID  && it.visible=="true"}?.let {sec ->
             selectedSection.onNext(sec)
             exhibits.onNext(allExhibits.filter { it.cityId == sec.id && it.lang == lang.value })
         }

@@ -17,5 +17,7 @@ class Section(
         var logo : String = "",
         @SerializedName("last_edit_time")
         var lastEdittime : String = "",
-        var visible : String = ""
+        var visible : String = "",
+        @SerializedName("name_prefix")
+        var namePrefix: String=""
 )
