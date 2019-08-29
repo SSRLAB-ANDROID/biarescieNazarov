@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Przewodnik po muzeum Biarescie</string>
+    <string name="section">"Sala № %1$s"</string>
+    <string name="sections">"Ekspozycje"</string>
+    <string name="exhibit">" Eksponować %1$s"</string>
+    <string name="choose_lang">"Wybierz swój język"</string>
+    <string name="nav_lang">"Język"</string>
+    <string name="nav_exit">"Wyjdź"</string>
+    <string name="about_us">"O nas"</string>
+    <string name="about_us_text"><![CDATA[
+<b> Deweloper: </b> Laboratorium rozpoznawania i syntezy mowy
+Wspólny Instytut Problemów Informatycznych Narodowej Akademii Nauk Białorusi (<a href="http://ssrlab.by/"> http://ssrlab.by </a>). <br/> <br/>
+<b> Internetowy przewodnik audio: </b> <br/>
+http://krokam.by/biarescie <br/>
+Kontakt w sprawie <b> sugestii, komentarzy, sugestii: </b> <br/>
+ssrlab221@gmail.com]]></string>
+    <string name="long_desc">Krótki</string>
+    <string name="short_desc">Pełny</string>
+</resources>
