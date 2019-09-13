@@ -10,7 +10,7 @@
     </style>
 
     <style name="LangButton" parent="Base.Widget.AppCompat.Button">
-        <item name="colorButtonNormal">#fff</item>
+        <item name="colorButtonNormal">#BFF7D1</item>
         <item name="android:padding">16dp</item>
     </style>
 </resources>

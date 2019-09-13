@@ -12,7 +12,7 @@ class LanguageManager(private val app: Application) {
         return when (app.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).getInt(LANGUAGE, 1)) {
             3 -> Language.RUS
             2 -> Language.ENG
-            4 -> Language.PL
+            5 -> Language.PL
             else -> Language.BEL
         }
     }

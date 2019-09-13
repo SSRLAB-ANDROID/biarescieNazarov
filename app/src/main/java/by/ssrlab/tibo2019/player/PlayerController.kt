@@ -55,6 +55,7 @@ class PlayerController : PlayerContract.Controller {
         mediaPlayer = MediaPlayer()
         mediaPlayer?.apply {
             setDataSource(url)
+
             setOnPreparedListener {
                 if (isStarted) {
                     startPlaying()

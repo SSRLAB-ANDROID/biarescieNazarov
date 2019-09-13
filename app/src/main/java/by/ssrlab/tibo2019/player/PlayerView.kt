@@ -4,12 +4,14 @@ import android.content.Context
 import android.support.v7.widget.AppCompatSeekBar
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import by.krokam.biarescie.R
 import by.krokam.biarescie.util.isGone
+import kotlinx.android.synthetic.main.fragment_exhibit.view.*
 import kotlinx.android.synthetic.main.view_player.view.*
 
 

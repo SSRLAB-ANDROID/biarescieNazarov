@@ -3,6 +3,7 @@ package by.krokam.biarescie.mvvm.ui
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.transition.Visibility
 import android.view.View
 import by.krokam.biarescie.R
 import by.krokam.biarescie.mvvm.viewmodels.ExhibitVM
