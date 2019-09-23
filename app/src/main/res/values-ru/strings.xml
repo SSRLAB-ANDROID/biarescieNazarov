@@ -8,6 +8,7 @@
     <string name="nav_lang">"Язык"</string>
     <string name="nav_exit">"Выход"</string>
     <string name="about_us">"О нас"</string>
+    <string name="opis">"Описание"</string>
     <string name="about_us_text"><![CDATA[
 <b>Разработчик: </b> Лаборатория распознавания и синтеза речи
 Объединенный институт проблем информатики НАН Беларуси (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>

@@ -18,25 +18,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <LinearLayout android:gravity="center_vertical"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                >
+                android:gravity="center_vertical">
 
                 <ImageView
                     android:id="@+id/photo"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@mipmap/ic_launcher"
-                    />
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
-                    android:layout_marginLeft="8dp"
-                    android:padding="8dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeMinTextSize="14sp" />
 
                     <TextView
                         android:id="@+id/tvTitle"
@@ -46,14 +57,22 @@
                         android:text="@string/exhibit"
                         android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/tvName"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/tvvol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="name"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/black"
-                        />
+                        android:src="@drawable/ic_volume_up_black_24dp"
+                        android:visibility="visible" />
                 </LinearLayout>
 
             </LinearLayout>

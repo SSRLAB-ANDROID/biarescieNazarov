@@ -19,7 +19,10 @@ class ExhibitListFragment : ListFragment<Exhibit, ExhibitListVM>(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         vm.sectionID.observe(this, Observer {
+            if(mainVM.repo.selectedSection.value!!.namePrefix.length>0)
             vm.toolbarTitle.value =mainVM.repo.selectedSection.value!!.namePrefix //getString(R.string.section, it!!.toString())
+
+
         })
     }
 

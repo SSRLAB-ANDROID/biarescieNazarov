@@ -1,5 +1,6 @@
 package by.krokam.biarescie.ui.recycler.viewholders
 
+import android.view.View
 import android.view.ViewGroup
 import by.krokam.biarescie.R
 import by.krokam.biarescie.data.items.Section
@@ -11,16 +12,10 @@ class SectionViewHolder(parent : ViewGroup) : BaseViewHolder<Section>(parent, R.
     override fun bind(item: Section) {
         super.bind(item)
         itemView.run {
-
-          /*  if(item.name.equals("Археалагічны музей Бярэсце")||item.name.equals("Раскоп")||item.name.equals("РАСКОП (паўднёвы бок)")
-                    ||item.name.equals("Археологический музей Берестье")||item.name.equals("РАСКОП (южная сторона)") ){
-                tvTitle.text = ""
-                tvName.textSize= 18F
-            }
-            else{
-            tvTitle.text = context.getString((R.string.section),(item.id.toInt()-2).toString())
-            }*/
+            if(item.namePrefix.length!=0)
             tvTitle.text=item.namePrefix
+            else
+                tvTitle.visibility= View.GONE
             tvName.text = item.name
             Glide.with(context).load(item.logo).into(photo)
         }

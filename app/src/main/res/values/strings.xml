@@ -7,6 +7,7 @@
     <string name="nav_lang">"Language"</string>
     <string name="nav_exit">"Exit"</string>
     <string name="about_us">"About us"</string>
+    <string name="opis">"Description"</string>
     <string name="about_us_text"><![CDATA[
 <b>Developer: </b> Speech Synthesis and Recognition Laboratory of
 United Institute of Informatics Problems of National Academy of Sciences of Belarus (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>

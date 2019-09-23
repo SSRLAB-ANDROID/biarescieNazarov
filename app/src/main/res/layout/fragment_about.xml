@@ -17,7 +17,7 @@
         android:linksClickable="true"
         android:text="@string/about_us_text"
         android:textColor="@color/navigation_view_selector"
-        android:textColorLink="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimary"
         android:textSize="18sp" />
 </LinearLayout>
 </ScrollView>

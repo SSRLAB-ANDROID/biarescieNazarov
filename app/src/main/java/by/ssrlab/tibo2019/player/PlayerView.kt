@@ -79,6 +79,9 @@ class PlayerView @JvmOverloads constructor(
                 }
             }
         })
+        /*if(totalTime.equals("0:0"))
+            viewPlayer.visibility=View.GONE
+        else viewPlayer.visibility=View.VISIBLE*/
     }
 
     override fun play() {

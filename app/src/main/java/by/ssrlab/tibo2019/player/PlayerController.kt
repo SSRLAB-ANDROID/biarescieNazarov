@@ -5,7 +5,7 @@ import android.media.MediaPlayer
 import android.os.Handler
 
 class PlayerController : PlayerContract.Controller {
-    private var mediaPlayer: MediaPlayer? = null
+    public var mediaPlayer: MediaPlayer? = null
     private var handler = Handler()
     private val loopRunnable = object : Runnable {
         override fun run() {
@@ -70,6 +70,8 @@ class PlayerController : PlayerContract.Controller {
                 currentTime = parseMS(0)
             }
             prepareAsync()
+
+
         }
     }
     private fun parseMS(ms: Int): String {

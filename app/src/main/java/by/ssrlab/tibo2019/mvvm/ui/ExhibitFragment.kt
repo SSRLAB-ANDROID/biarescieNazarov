@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.transition.Visibility
 import android.view.View
 import by.krokam.biarescie.R
+import by.krokam.biarescie.data.items.Exhibit
 import by.krokam.biarescie.mvvm.viewmodels.ExhibitVM
 import by.krokam.biarescie.ui.viewpager.CustomPagerAdapter
 import by.krokam.biarescie.ui.viewpager.TextFragment
@@ -13,6 +14,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_exhibit.*
 
 class ExhibitFragment : BaseFragment<ExhibitVM>() {
+
     override val contentLayoutID = R.layout.fragment_exhibit
 
     override fun initVM() {
@@ -22,14 +24,23 @@ class ExhibitFragment : BaseFragment<ExhibitVM>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupExhibitObserver()
-        viewPlayer.attachController(vm.playerController)
+
+            viewPlayer.attachController(vm.playerController)
+
     }
 
 
     private fun setupExhibitObserver() {
         vm.selectedExhibit.observe(this, Observer {
             Glide.with(context!!).load(it!!.photo).into(ivPhoto)
-            ///vm.toolbarTitle.value =it.name //getString(R.string.exhibit, it.idPoint.toString())
+            vm.toolbarTitle.value =resources.getString(R.string.opis) //getString(R.string.exhibit, it.idPoint.toString())
+
+            if(it.sound.length!=0) {
+            viewPlayer.visibility=View.VISIBLE
+        }
+                else{
+        viewPlayer.visibility=View.GONE
+            }
             tvName.text = it.name
             tvPlace.text = it.pointMuseum
 

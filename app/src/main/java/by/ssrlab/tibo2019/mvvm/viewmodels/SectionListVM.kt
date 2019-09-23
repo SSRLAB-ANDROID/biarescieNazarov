@@ -19,10 +19,6 @@ class SectionListVM : ListVM<Section>() {
         repo.sections.executeInBackSubOnMain().subscribe {
             adapter.items = it!!.sortedBy { it.id.toInt() }
             isLoading.value = false
-          /*  for(i in adapter.items){
-                if(!adapter.items[i].name.equals("Археалагічны музей Бярэсце")||!adapter.items[i].equals("Раскоп")||!adapter.items[i].name.equals("РАСКОП (паўднёвы бок)"))))
-                  for(j in adapter.items)
-            }*/
 
         }.addTo(subs)
     }
