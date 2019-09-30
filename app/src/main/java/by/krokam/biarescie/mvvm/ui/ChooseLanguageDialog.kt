@@ -34,5 +34,9 @@ class ChooseLanguageDialog : AppCompatDialogFragment(){
             (activity!! as MainActivity).setLanguage(Language.PL)
             dismiss()
         }
+        btnChin.setOnClickListener {
+            (activity!! as MainActivity).setLanguage(Language.ZH)
+            dismiss()
+        }
     }
 }

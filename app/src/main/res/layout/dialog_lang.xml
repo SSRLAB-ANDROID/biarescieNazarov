@@ -9,8 +9,8 @@
 
 
     <LinearLayout
-        android:layout_width="198dp"
-        android:layout_height="304dp"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"
@@ -63,6 +63,17 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimaryDark"
             android:text="Polski"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnChin"
+            style="@style/LangButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Chinese"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

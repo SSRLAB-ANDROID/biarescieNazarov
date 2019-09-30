@@ -45,7 +45,7 @@ class Repository2(app: Application, private var lang: Language) {
         }
         allSections.find { it.lang == lang.value && it.id == selectedSectionID  && it.visible=="true"}?.let {sec ->
             selectedSection.onNext(sec)
-            exhibits.onNext(allExhibits.filter { it.cityId == sec.id && it.lang == lang.value })
+            exhibits.onNext(allExhibits.filter { it.cityId == sec.id && it.lang == lang.value && it.visible=="true"})
         }
     }
 

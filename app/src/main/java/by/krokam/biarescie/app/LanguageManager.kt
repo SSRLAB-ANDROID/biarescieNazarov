@@ -13,6 +13,7 @@ class LanguageManager(private val app: Application) {
             3 -> Language.RUS
             2 -> Language.ENG
             5 -> Language.PL
+            4-> Language.ZH
             else -> Language.BEL
         }
     }

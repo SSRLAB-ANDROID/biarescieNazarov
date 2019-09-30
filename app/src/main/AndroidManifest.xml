@@ -15,7 +15,7 @@
         android:roundIcon="@drawable/plus"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvvm.ui.MainActivity">
+        <activity android:name="by.krokam.biarescie.mvvm.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

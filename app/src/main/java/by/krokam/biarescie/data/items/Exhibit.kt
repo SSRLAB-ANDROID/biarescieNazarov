@@ -27,7 +27,9 @@ class Exhibit(
         var photo : String = "",
         @SerializedName("city_id")
         var cityId : String = "",
+        var visible : String = "",
         @Ignore
         var images : List<String> = listOf(),
         var image : String = ""
+
 )
