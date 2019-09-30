@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">别列斯切</string>
+    <string name="section">"Section %1$s"</string>
+    <string name="sections">"部分"</string>
+    <string name="exhibit">" Organization %1$s"</string>
+    <string name="choose_lang">"选择语言"</string>
+    <string name="nav_lang">"舌头"</string>
+    <string name="nav_exit">"产量"</string>
+    <string name="about_us">"关于我们"</string>
+    <string name="opis">"说明"</string>
+    <string name="about_us_text"><![CDATA[
+<b>Developer: </b> Speech Synthesis and Recognition Laboratory of
+United Institute of Informatics Problems of National Academy of Sciences of Belarus (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>
+<b>Audio Guide on the Internet:</b> <br/>
+http://krokam.by/biarescie <br/>
+Please, sent your <b>proposals, comments and wishes:</b><br/>
+ssrlab221@gmail.com]]></string>
+
+    <string name="long_desc">Brief description</string>
+    <string name="short_desc">description</string>
+</resources>
