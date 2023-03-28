@@ -1,10 +1,10 @@
 package by.krokam.biarescie.mvvm.viewmodels
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import by.krokam.biarescie.data.Repository2
+import com.github.terrakok.cicerone.Router
 import io.reactivex.disposables.CompositeDisposable
-import ru.terrakok.cicerone.Router
 
 abstract class BaseVM : ViewModel() {
     val toolbarTitle = MutableLiveData<String>()

@@ -1,20 +1,30 @@
 package by.krokam.biarescie.mvvm.ui
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import by.krokam.biarescie.R
 import by.krokam.biarescie.mvvm.viewmodels.ListVM
-import kotlinx.android.synthetic.main.fragment_list.*
 
 abstract class ListFragment<T, VM : ListVM<T>> : BaseFragment<VM>(){
+
     override val contentLayoutID = R.layout.fragment_list
+    private lateinit var recycler: RecyclerView
+    private lateinit var swipeLayout: SwipeRefreshLayout
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        recycler = view.findViewById(R.id.recycler)
+        swipeLayout = view.findViewById(R.id.swipeLayout)
+
         super.onViewCreated(view, savedInstanceState)
         recycler.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
+            layoutManager = LinearLayoutManager(
+                context,
+                RecyclerView.VERTICAL,
+                false
+            )
             adapter = vm.adapter
         }
         swipeLayout.setOnRefreshListener {

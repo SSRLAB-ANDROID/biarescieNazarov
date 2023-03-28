@@ -6,5 +6,4 @@ object Screens {
     val EXHIBIT_SCREEN = "EXHIBIT_SCREEN"
     val ABOUT_US_SCREEN = "ABOUT_US_SCREEN"
     val PREVIEW_SCREEN = "PREVIEW_SCREEN"
-
 }

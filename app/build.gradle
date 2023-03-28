@@ -1,20 +1,18 @@
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
-
-apply plugin: 'kotlin-kapt'
-
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     defaultConfig {
+        multiDexEnabled true
+        viewBinding.enabled = true
         applicationId "by.krokam.biarescie"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -33,24 +31,29 @@ ext {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$support_version"
-    implementation "com.android.support:support-v4:$support_version"
-    implementation "com.android.support:design:$support_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.6.0'
 
-    implementation 'ru.terrakok.cicerone:cicerone:3.0.0'
-    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-
+    implementation("com.github.terrakok:cicerone:7.1")
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation 'androidx.room:room-runtime:2.5.0'
+    kapt 'androidx.room:room-compiler:2.5.0'
     implementation 'com.github.bumptech.glide:glide:3.8.0'
 
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    implementation "android.arch.persistence.room:rxjava2:$room_version"
+    implementation 'androidx.room:room-rxjava2:2.5.0'
 
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    testImplementation 'com.android.support.test:runner:1.0.2'
 }

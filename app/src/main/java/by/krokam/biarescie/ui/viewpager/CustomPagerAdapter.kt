@@ -1,12 +1,12 @@
 package by.krokam.biarescie.ui.viewpager
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentStatePagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 import android.view.ViewGroup
 
 
-class CustomPagerAdapter(val fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
+class CustomPagerAdapter(private val fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
     private val mFragmentList = mutableListOf<Fragment>()
     private val mFragmentTitleList = mutableListOf<String>()
     private var mCurrentPosition = -1
@@ -24,7 +24,7 @@ class CustomPagerAdapter(val fm : FragmentManager) : FragmentStatePagerAdapter(f
         mFragmentTitleList.add(title)
     }
 
-    override fun getPageTitle(pos: Int): CharSequence? {
+    override fun getPageTitle(pos: Int): CharSequence {
         return mFragmentTitleList[pos]
     }
 

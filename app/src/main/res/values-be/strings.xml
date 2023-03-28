@@ -14,8 +14,9 @@
 Аб&apos;яднаны Інстытут праблем Інфарматыкі НАН Беларусі (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>
 <b>Аўдыягід ў Інтэрнэце:</b> <br/>
 http://krokam.by/biarescie <br/>
-Кантакт для <b>прапаноў, каментарыяў, пажаданняў:</b><br/>
-ssrlab221@gmail.com]]> </string>
+Кантакт для <b>прапаноў, каментарыяў, пажаданняў:]]> </string>
+
+    <string name="mail"><u>ssrlab221@gmail.com</u></string>
 
     <string name="long_desc">Каротка</string>
     <string name="short_desc">Цалкам</string>

@@ -13,11 +13,15 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.BehaviorSubject
 
 class Repository2(app: Application, private var lang: Language) {
+
     private val apiService = ServiceCreator.createService(ApiService::class.java)
     private val subscriptions = CompositeDisposable()
     private var allSections = listOf<Section>()
+
     val sections = BehaviorSubject.create<List<Section>>().apply { onNext(listOf()) }
+
     private var allExhibits = listOf<Exhibit>()
+
     val exhibits = BehaviorSubject.create<List<Exhibit>>().apply { onNext(listOf()) }
     val selectedSection = BehaviorSubject.create<Section>()
     val selectedExhibit = BehaviorSubject.create<Exhibit>()
@@ -40,7 +44,7 @@ class Repository2(app: Application, private var lang: Language) {
 
     private fun refreshData() {
         sections.onNext(allSections.filter { it.lang == lang.value && it.visible=="true" })
-        allExhibits.find { it.idPoint.toString() == selectedExhibitID && it.lang == lang.value && it.name.length!=0 }?.let {
+        allExhibits.find { it.idPoint.toString() == selectedExhibitID && it.lang == lang.value && it.name.isNotEmpty() }?.let {
             selectedExhibit.onNext(it)
         }
         allSections.find { it.lang == lang.value && it.id == selectedSectionID  && it.visible=="true"}?.let {sec ->

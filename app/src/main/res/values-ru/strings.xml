@@ -14,8 +14,9 @@
 Объединенный институт проблем информатики НАН Беларуси (<a href="http://ssrlab.by/">http://ssrlab.by</a>).<br/><br/>
 <b>Аудиогид в Интернете:</b> <br/>
 http://krokam.by/biarescie <br/>
-Контакт для <b>предложений, комментариев, пожеланий:</b><br/>
-ssrlab221@gmail.com]]> </string>
+Контакт для <b>предложений, комментариев, пожеланий:]]> </string>
+
+    <string name="mail"><u>ssrlab221@gmail.com</u></string>
 
     <string name="long_desc">Краткое описание</string>
     <string name="short_desc">Полное описание</string>

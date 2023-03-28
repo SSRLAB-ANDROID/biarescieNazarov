@@ -1,26 +1,25 @@
 package by.krokam.biarescie.navigation
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentTransaction
-import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import by.krokam.biarescie.R
 import by.krokam.biarescie.mvvm.ui.*
-import ru.terrakok.cicerone.android.SupportFragmentNavigator
-import ru.terrakok.cicerone.commands.Command
+import com.github.terrakok.cicerone.Command
+import com.github.terrakok.cicerone.androidx.AppNavigator
 
-class Navigator(private val activity: AppCompatActivity, containerID: Int) :
-    SupportFragmentNavigator(activity.supportFragmentManager, containerID) {
+class Navigator(activity: MainActivity, containerID: Int) :
+    AppNavigator(activity, containerID) {
 
-    override fun exit() {
+    fun exit() {
         activity.finish()
     }
 
-    override fun showSystemMessage(message: String?) {
+    fun showSystemMessage(message: String?) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun createFragment(screenKey: String?, data: Any?): Fragment {
+    fun createFragment(screenKey: String?, data: Any?): Fragment {
         return when (screenKey) {
             Screens.SECTION_LIST_SCREEN -> SectionListFragment()
             Screens.EXHIBIT_LIST_SCREEN -> ExhibitListFragment()
@@ -31,7 +30,7 @@ class Navigator(private val activity: AppCompatActivity, containerID: Int) :
         }
     }
 
-    override fun setupFragmentTransactionAnimation(
+    fun setupFragmentTransactionAnimation(
         command: Command,
         currentFragment: Fragment?,
         nextFragment: Fragment,

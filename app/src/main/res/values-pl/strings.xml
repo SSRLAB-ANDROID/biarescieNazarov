@@ -14,8 +14,10 @@
 Wspólny Instytut Problemów Informatycznych Narodowej Akademii Nauk Białorusi (<a href="http://ssrlab.by/"> http://ssrlab.by </a>). <br/> <br/>
 <b> Internetowy przewodnik audio: </b> <br/>
 http://krokam.by/biarescie <br/>
-Kontakt w sprawie <b> sugestii, komentarzy, sugestii: </b> <br/>
-ssrlab221@gmail.com]]></string>
+Kontakt w sprawie <b> sugestii, komentarzy, sugestii:]]></string>
+
+    <string name="mail"><u>ssrlab221@gmail.com</u></string>
+
     <string name="long_desc">Krótki</string>
     <string name="short_desc">Pełny</string>
 </resources>

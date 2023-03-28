@@ -12,12 +12,24 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         android:autoLink="web"
         android:linksClickable="true"
         android:text="@string/about_us_text"
         android:textColor="@color/navigation_view_selector"
         android:textColorLink="@color/colorPrimary"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/mail"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"/>
+
 </LinearLayout>
 </ScrollView>

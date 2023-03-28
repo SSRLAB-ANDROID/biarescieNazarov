@@ -1,10 +1,9 @@
 package by.krokam.biarescie.data.room
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.RoomDatabase
 import by.krokam.biarescie.data.items.Exhibit
 import by.krokam.biarescie.data.items.Section
-
 
 @Database(
         entities = [Section::class, Exhibit::class],

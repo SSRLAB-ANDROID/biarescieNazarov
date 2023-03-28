@@ -2,6 +2,7 @@ package by.krokam.biarescie.util
 
 import android.view.View
 import android.view.ViewTreeObserver
+import by.krokam.biarescie.mvvm.viewmodels.MainViewModel
 import io.reactivex.Flowable
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -40,3 +41,5 @@ fun View.onParamMeasured(param: () -> Int, onMeasured: (Int) -> Unit) {
         })
     }
 }
+
+var mainViewModel: MainViewModel? = null

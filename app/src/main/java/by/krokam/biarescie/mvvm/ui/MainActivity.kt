@@ -1,41 +1,46 @@
 package by.krokam.biarescie.mvvm.ui
 
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import by.krokam.biarescie.R
 import by.krokam.biarescie.app.App
 import by.krokam.biarescie.mvvm.viewmodels.MainViewModel
 import by.krokam.biarescie.navigation.Navigator
-import by.krokam.biarescie.navigation.Screens
 import by.krokam.biarescie.app.ContextWrapper
 import by.krokam.biarescie.app.Language
 import by.krokam.biarescie.app.LanguageManager
-import kotlinx.android.synthetic.main.activity_main.*
-
+import by.krokam.biarescie.databinding.ActivityMainBinding
+import com.github.terrakok.cicerone.androidx.FragmentScreen
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity(), NavigationHolder {
+
     private val navigator = Navigator(this, R.id.container)
     private lateinit var vm: MainViewModel
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        vm = ViewModelProviders.of(this).get(MainViewModel::class.java)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        vm = ViewModelProvider(this)[MainViewModel::class.java]
         setupNavigationMenu()
     }
 
     private fun setupNavigationMenu() {
-        navigationView.apply {
+        binding.navigationView.apply {
             setNavigationItemSelectedListener { menuItem ->
                 menuItem.isChecked = true
-                drawerLayout.closeDrawers()
+                binding.drawerLayout.closeDrawers()
                 when (menuItem.itemId) {
                     R.id.nav_lang -> ChooseLanguageDialog().show(supportFragmentManager, "lang")
-                    R.id.nav_about -> { vm.router.navigateTo(Screens.ABOUT_US_SCREEN) }
-                    R.id.nav_exit -> System.exit(0)
+                    R.id.nav_about -> { vm.router.navigateTo(FragmentScreen { AboutUsFragment() }) }
+                    R.id.nav_exit -> exitProcess(0)
                 }
                 false
             }
@@ -43,7 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationHolder {
     }
 
     override fun openDrawer() {
-        drawerLayout.openDrawer(GravityCompat.START)
+        binding.drawerLayout.openDrawer(GravityCompat.START)
     }
 
     fun setLanguage(lang : Language){
@@ -66,9 +71,10 @@ class MainActivity : AppCompatActivity(), NavigationHolder {
         super.onPause()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawers()
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawers()
         } else {
             vm.router.exit()
         }

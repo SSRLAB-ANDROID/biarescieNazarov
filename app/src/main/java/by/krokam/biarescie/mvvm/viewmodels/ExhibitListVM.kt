@@ -1,18 +1,19 @@
 package by.krokam.biarescie.mvvm.viewmodels
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import by.krokam.biarescie.data.items.Exhibit
-import by.krokam.biarescie.navigation.Screens
+import by.krokam.biarescie.mvvm.ui.ExhibitFragment
 import by.krokam.biarescie.ui.recycler.ExhibitListAdapter
 import by.krokam.biarescie.util.addTo
 import by.krokam.biarescie.util.executeInBackSubOnMain
+import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-class ExhibitListVM : ListVM<Exhibit>(){
+class ExhibitListVM : ListVM<Exhibit>() {
     val sectionID = MutableLiveData<Int>()
     override val adapter = ExhibitListAdapter().apply {
         onClick = {
             repo.selectedExhibitID = it.idPoint.toString()
-            router.navigateTo(Screens.EXHIBIT_SCREEN)
+            router.navigateTo(FragmentScreen { ExhibitFragment() })
         }
     }
 
@@ -23,8 +24,8 @@ class ExhibitListVM : ListVM<Exhibit>(){
             isLoading.value = false
         }.addTo(subs)
 
-        repo.exhibits.executeInBackSubOnMain().subscribe {
-            adapter.items = it!!.sortedBy { it.id.toInt() }
+        repo.exhibits.executeInBackSubOnMain().subscribe { it1 ->
+            adapter.items = it1!!.sortedBy { it.id.toInt() }
             adapter.notifyDataSetChanged()
         }.addTo(subs)
     }

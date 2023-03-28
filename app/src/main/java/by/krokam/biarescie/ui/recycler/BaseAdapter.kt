@@ -1,6 +1,6 @@
 package by.krokam.biarescie.ui.recycler
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import by.krokam.biarescie.ui.recycler.viewholders.BaseViewHolder
 
