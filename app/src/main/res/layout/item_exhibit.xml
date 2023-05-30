@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -29,15 +29,23 @@
                     android:id="@+id/photo"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="8dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/vol_container"
+                    app:layout_constraintStart_toEndOf="@id/photo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                     <TextView
                         android:id="@+id/tvName"
@@ -47,7 +55,9 @@
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
                         app:autoSizeMaxTextSize="16sp"
-                        app:autoSizeMinTextSize="14sp" />
+                        app:autoSizeMinTextSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
                         android:id="@+id/tvTitle"
@@ -55,27 +65,38 @@
                         android:layout_height="0dp"
                         android:layout_weight="0"
                         android:text="@string/exhibit"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/tvName"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="10dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/vol_container"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:foregroundGravity="right"
-                    android:gravity="start"
-                    android:orientation="vertical">
+
+                    android:layout_marginEnd="32dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                     <ImageView
                         android:id="@+id/tvvol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_volume_up_black_24dp"
-                        android:visibility="visible" />
-                </LinearLayout>
+                        android:visibility="visible"
 
-            </LinearLayout>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
