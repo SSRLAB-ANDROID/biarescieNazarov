@@ -3,7 +3,7 @@
     <string name="app_name">Biarescie</string>
     <string name="section">"Sala № %1$s"</string>
     <string name="sections">"Ekspozycje"</string>
-    <string name="exhibit">" Eksponować %1$s"</string>
+    <string name="exhibit">"Eksponować %1$s"</string>
     <string name="choose_lang">"Wybierz swój język"</string>
     <string name="nav_lang">"Język"</string>
     <string name="nav_exit">"Wyjdź"</string>

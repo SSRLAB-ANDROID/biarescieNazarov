@@ -3,7 +3,7 @@
     <string name="app_name">Бярэсце</string>
     <string name="section">"Зала № %1$s"</string>
     <string name="sections">Часткi</string>
-    <string name="exhibit">" Экспанат %1$s"</string>
+    <string name="exhibit">"Экспанат %1$s"</string>
     <string name="choose_lang">"Абярыце мову"</string>
     <string name="nav_lang">"Мова"</string>
     <string name="nav_exit">"Выхад"</string>
